@@ -1,3 +1,14 @@
+terraform {
+  backend "remote" {
+    hostname      = "app.terraform.io"
+    organization  = "francoisneron-test"
+
+    workspaces {
+      name = "state-migration"
+    }
+  }
+}
+
 # Terraform configuration
 
 variable "name_length" {
